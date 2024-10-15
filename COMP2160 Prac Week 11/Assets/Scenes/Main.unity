@@ -533,6 +533,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 184f488bf1486423baadff9ee0a0bade, type: 3}
+--- !u!1 &1776086468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1883007639197426217, guid: 1a592d885d76b4a89afcc829b8d5f560,
+    type: 3}
+  m_PrefabInstance: {fileID: 923977100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &2408856355099670849
 Camera:
   m_ObjectHideFlags: 0
@@ -648,6 +654,7 @@ GameObject:
   - component: {fileID: 2408856355099670849}
   - component: {fileID: 3387069130461659845}
   - component: {fileID: 3918152967393434438}
+  - component: {fileID: 7675371378090306039}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -670,6 +677,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &7675371378090306039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4601777957755373507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce57815147dd8d647aa75c8f0058886d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marble: {fileID: 1776086468}
+  minZoomDistance: 30
+  maxZoomDistance: 120
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
