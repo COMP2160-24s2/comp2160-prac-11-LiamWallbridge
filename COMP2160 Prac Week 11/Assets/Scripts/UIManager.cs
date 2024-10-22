@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
 #region UI Elements
     [SerializeField] private Transform crosshair;
     [SerializeField] private Transform target;
+    [SerializeField] private bool deltaEnabled;
 #endregion 
 
 #region Singleton
@@ -79,14 +80,20 @@ public class UIManager : MonoBehaviour
 
     private void MoveCrosshair() 
     {
-        Vector3 mousePosition = new Vector3(mouseAction.ReadValue<Vector2>().x, mouseAction.ReadValue<Vector2>().y, 0);
-        LayerMask mask = LayerMask.GetMask("Walls");
-        Ray ray = Camera.main.ScreenPointToRay(mousePosition);
-        RaycastHit hit;
+        if (deltaEnabled){
+            //STEP 5 METHOD
+            //add delta onto world->screen space then raycast twice?
+        }else{
+            //DEFAULT METHOD
+            Vector3 mousePosition = new Vector3(mouseAction.ReadValue<Vector2>().x, mouseAction.ReadValue<Vector2>().y, 0);
+            LayerMask mask = LayerMask.GetMask("Walls");
+            Ray ray = Camera.main.ScreenPointToRay(mousePosition);
+            RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, mask))
-        {
-            crosshair.transform.position = hit.point;
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, mask))
+            {
+                crosshair.transform.position = hit.point + new Vector3(0,0.1f,0);
+            }
         }
     }
 

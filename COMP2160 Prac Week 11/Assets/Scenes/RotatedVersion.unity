@@ -160,11 +160,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -4.09
       objectReference: {fileID: 0}
-    - target: {fileID: 5450362575394769019, guid: b96044efa2ae54750ad24e39e1352865,
-        type: 3}
-      propertyPath: deltaEnabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7485987256551808895, guid: b96044efa2ae54750ad24e39e1352865,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -235,6 +230,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b96044efa2ae54750ad24e39e1352865, type: 3}
+--- !u!1 &331284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8113048059478323343, guid: b96044efa2ae54750ad24e39e1352865,
+    type: 3}
+  m_PrefabInstance: {fileID: 331283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   marble: {fileID: 1776086468}
-  crosshair: {fileID: 977753221}
+  crosshair: {fileID: 331284}
 --- !u!4 &527827055
 Transform:
   m_ObjectHideFlags: 0
@@ -557,12 +558,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a592d885d76b4a89afcc829b8d5f560, type: 3}
---- !u!1 &977753221 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8113048059478323343, guid: b96044efa2ae54750ad24e39e1352865,
-    type: 3}
-  m_PrefabInstance: {fileID: 331283}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1183061768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -768,13 +763,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4601777957755373507}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 527827055}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!114 &7675371378090306039
 MonoBehaviour:
   m_ObjectHideFlags: 0
