@@ -82,8 +82,18 @@ public class UIManager : MonoBehaviour
     {
         if (deltaEnabled){
             //STEP 5 METHOD
-            //add delta onto world->screen space then raycast twice?
-        }else{
+            Vector2 delta = deltaAction.ReadValue<Vector2>();
+
+            Vector3 crosshairScreenPos = Camera.main.WorldToScreenPoint(crosshair.position);
+            crosshairScreenPos += new Vector3(delta.x, delta.y, 0);
+
+            crosshairScreenPos.x = Mathf.Clamp(crosshairScreenPos.x, 0, Screen.width);
+            crosshairScreenPos.y = Mathf.Clamp(crosshairScreenPos.y, 0, Screen.height);
+
+            Vector3 newCrosshairWorldPos = Camera.main.ScreenToWorldPoint(crosshairScreenPos);
+            crosshair.position = newCrosshairWorldPos;
+        }
+        else{
             //DEFAULT METHOD
             Vector3 mousePosition = new Vector3(mouseAction.ReadValue<Vector2>().x, mouseAction.ReadValue<Vector2>().y, 0);
             LayerMask mask = LayerMask.GetMask("Walls");
